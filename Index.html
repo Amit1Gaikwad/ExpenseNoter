@@ -1,0 +1,137 @@
+<!-- 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Expense Entry</title>
+</head>
+<body>
+
+<h2>Enter Expense Details</h2>
+
+<form action="SaveExpense" method="post">
+    <table border="1" cellpadding="8" cellspacing="0">
+        <tr>
+            <th>City</th>
+            <th>Date</th>
+            <th>Day</th>
+            <th>Product</th>
+            <th>Amount</th>
+        </tr>
+        <tr>
+            <td><input type="text" name="city" required></td>
+            <td><input type="date" name="date" required></td>
+            <td><input type="text" name="day" required></td>
+            <td><input type="text" name="product" required></td>
+            <td><input type="number" name="amount" required></td>
+        </tr>
+    </table>
+    <br>
+    <input type="submit" value="Save">
+</form>
+
+</body>
+</html>
+ -->
+ <!-- -
+ <!DOCTYPE html>
+<html>
+<head>
+    <title>Expense Entry</title>
+    <script>
+        function addRow() {
+            var table = document.getElementById("expenseTable");
+            var row = table.insertRow(-1);
+
+            row.insertCell(0).innerHTML = '<input type="text" name="city[]" required>';
+            row.insertCell(1).innerHTML = '<input type="date" name="date[]" required>';
+            row.insertCell(2).innerHTML = '<input type="text" name="day[]" required>';
+            row.insertCell(3).innerHTML = '<input type="text" name="product[]" required>';
+            row.insertCell(4).innerHTML = '<input type="number" name="amount[]" required>';
+        }
+    </script>
+</head>
+<body>
+
+<h2>Enter Expense Details</h2>
+
+<form action="SaveExpense" method="post">
+    <table border="1" cellpadding="8" cellspacing="0" id="expenseTable">
+        <tr>
+            <th>City</th>
+            <th>Date</th>
+            <th>Day</th>
+            <th>Product</th>
+            <th>Amount</th>
+        </tr>
+        <tr>
+            <td><input type="text" name="city[]" required></td>
+            <td><input type="date" name="date[]" required></td>
+            <td><input type="text" name="day[]" required></td>
+            <td><input type="text" name="product[]" required></td>
+            <td><input type="number" name="amount[]" required></td>
+        </tr>
+    </table>
+
+    <br>
+    <button type="button" onclick="addRow()">Add Product</button>
+    <br><br>
+    <input type="submit" value="SaveExpense">
+    
+<a href="ViewServlet">View Employee</a>
+</form>
+
+</body>
+</html>
+  -->
+  
+  <!DOCTYPE html>
+<html>
+<head>
+    <title>Expense Entry</title>
+    <script>
+        function addRow() {
+            var table = document.getElementById("expenseTable");
+            var row = table.insertRow(-1);
+
+            row.insertCell(0).innerHTML = '<input type="text" name="city" required>';
+            row.insertCell(1).innerHTML = '<input type="date" name="date" required>';
+            row.insertCell(2).innerHTML = '<input type="text" name="day" required>';
+            row.insertCell(3).innerHTML = '<input type="text" name="product" required>';
+            row.insertCell(4).innerHTML = '<input type="number" name="amount" required>';
+        }
+    </script>
+</head>
+<body>
+
+<h2>Enter Expense Details</h2>
+
+<form action="SaveExpense" method="post">
+
+    <table border="1" id="expenseTable">
+        <tr>
+            <th>City</th>
+            <th>Date</th>
+            <th>Day</th>
+            <th>Product</th>
+            <th>Amount</th>
+        </tr>
+        <tr>
+            <td><input type="text" name="city" required></td>
+            <td><input type="date" name="date" required></td>
+            <td><input type="text" name="day" required></td>
+            <td><input type="text" name="product" required></td>
+            <td><input type="number" name="amount" required></td>
+        </tr>
+    </table>
+
+    <br>
+    <button type="button" onclick="addRow()">Add Product</button>
+    <br><br>
+    <input type="submit" value="Save All">
+    <a href="ViewExpenseServlet">View Expenses</a>
+
+</form>
+
+</body>
+</html>
+  
